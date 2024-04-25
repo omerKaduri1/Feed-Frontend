@@ -1,20 +1,32 @@
 import { useForm } from "../customHooks/useForm"
 import { commentService } from "../services/comment.service"
+import Button from '@mui/material/Button'
 
-export function Form({ onSendComment }) {
-    
+export function Form({ onAddComment }) {
+    const [comment, handleChange, setComment] = useForm(commentService.getEmptyComment())
 
+    async function onSendComment(ev) {
+        ev.preventDefault()
+        try {
+            await onAddComment(comment)
+            setComment(commentService.getEmptyComment())
+        } catch (error) {
+            console.log('error:', error)
+        }
+    }
 
+    const { to, message } = comment
     return (
-        <form {...attrs}>
+        <form onSubmit={onSendComment}>
             <section>
                 {/* <label htmlFor="email">Email</label> */}
-                <input {...register('email')} />
+                <input onChange={handleChange} value={to} type="email" name="to" id="to" placeholder="Email" />
             </section>
             <section>
                 {/* <label htmlFor="message">Message</label> */}
-                <input {...register('message', 'textarea')} />
+                <textarea onChange={handleChange} value={message} type="txt" name="message" id="message" placeholder="Message" />
             </section>
+            <Button variant="contained" type="submit">Submit</Button>
         </form>
     )
 }

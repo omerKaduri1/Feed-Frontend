@@ -7,7 +7,7 @@ export const commentService = {
     save,
     getDefaultFilter,
     getEmptyComment,
-    getByUserId
+    // getByUserId
 }
 
 const BASE_URL = 'comment'
@@ -16,10 +16,10 @@ async function query(filterBy) {
     return httpService.get(BASE_URL, { params: { filterBy } })
 }
 
-async function getByUserId(userId) {
-    const comments = await httpService.get(BASE_URL + '/usercomments')
-    return comments
-}
+// async function getByUserId(userId) {
+//     const comments = await httpService.get(BASE_URL + '/usercomments')
+//     return comments
+// }
 
 function getById(commentId) {
     return httpService.get(`${BASE_URL}/${commentId}`)
@@ -46,7 +46,7 @@ function getDefaultFilter() {
 
 function getEmptyComment() {
     return {
-        email: '',
+        to: '',
         message: ''
     }
 }
