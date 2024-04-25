@@ -14,7 +14,21 @@ body {
 }
 
 .app-container {
-    width: 50%;
+    width: 30%;
     height: 100%;
-    transform: translateX(50%) translateY(20%);
+    text-align: center;
+
+    margin-top: 100px;
+    margin-inline: auto;
+
+    border: 1px solid grey;
+
+    .send-mail-form {
+        height: 30%;
+        padding: 16px 20px;
+
+        input {
+            width: 100%;
+        }
+    }
 }

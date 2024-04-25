@@ -17,7 +17,7 @@ export function Form({ onAddComment }) {
 
     const { to, message } = comment
     return (
-        <form onSubmit={onSendComment}>
+        <form onSubmit={onSendComment} className="send-mail-form">
             <section>
                 {/* <label htmlFor="email">Email</label> */}
                 <input onChange={handleChange} value={to} type="email" name="to" id="to" placeholder="Email" />
