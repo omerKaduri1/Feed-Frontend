@@ -1,4 +1,3 @@
-import { utilService } from "./util.service"
 import { httpService } from "./http.service"
 
 export const commentService = {
