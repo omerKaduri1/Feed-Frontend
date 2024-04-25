@@ -1,8 +1,8 @@
 import { useForm } from "../customHooks/useForm"
 import { commentService } from "../services/comment.service"
 
-export function Form({ onSendComment }) {
-    
+export function Form() {
+    const [comment, handleChange, setComment] = useForm(commentService.getEmptyComment())
 
 
     return (

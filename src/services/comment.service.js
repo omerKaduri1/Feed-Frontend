@@ -46,7 +46,7 @@ function getDefaultFilter() {
 
 function getEmptyComment() {
     return {
-        email: '',
+        to: '',
         message: ''
     }
 }
