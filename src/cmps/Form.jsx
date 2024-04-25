@@ -24,7 +24,9 @@ export function Form({ onAddComment }) {
             <section>
                 <textarea onChange={handleChange} value={message} type="txt" name="message" id="message" placeholder="Message" />
             </section>
-            <Button variant="contained" type="submit">Submit</Button>
+            <section className="btn-container flex">
+                <Button variant="contained" type="submit">Submit</Button>
+            </section>
         </form>
     )
 }
