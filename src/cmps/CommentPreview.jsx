@@ -8,7 +8,7 @@ export function CommentPreview({ comment }) {
         <img src={gravatarUrl} alt="Gravatar" />
         <div className="flex column justify-center comment-details">
             <div className="to-section">{comment.to}</div>
-            <div>{comment.message}</div>
+            <div className="message">{comment.message}</div>
         </div>
     </div>
 }

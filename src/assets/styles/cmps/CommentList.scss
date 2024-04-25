@@ -1,18 +1,30 @@
 .comments-container {
     align-items: flex-start;
     background-color: white;
+    // gap: 1em;
 
     .comment {
-        margin-block-start: 1em;
-        gap: .5em;
+        padding: 8px 16px;
 
-        img{
-            width: 60px;
+        img {
+            width: 40px;
         }
 
         .comment-details {
+            font-size: 14px;
             align-items: flex-start;
             gap: .7em;
+            margin-inline-start: .6em;
+            line-height: 14px;
+
+            .message {
+                color: rgb(129, 125, 125);
+            }
+
+            .to-section {
+                color: rgb(73, 72, 72);
+                font-weight: 600;
+            }
         }
     }
 }

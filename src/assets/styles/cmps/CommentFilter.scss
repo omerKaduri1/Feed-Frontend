@@ -1,0 +1,24 @@
+.filter-form {
+    height: 30%;
+    padding-top: 20px;
+    padding-inline: 16px;
+    padding-bottom: 4px;
+    background-color: white;
+}
+
+.filter {
+
+    width: 100%;
+    padding-left: 12px;
+    line-height: 28px;
+    border: 1px lightgray solid;
+
+    &:focus {
+        outline: none;
+    }
+
+    ::placeholder {
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(179, 179, 179);
+    }
+}
