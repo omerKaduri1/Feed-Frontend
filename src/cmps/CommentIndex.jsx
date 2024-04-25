@@ -9,7 +9,6 @@ export function CommentIndex() {
     const [filterBy, setFilterBy] = useState(commentService.getDefaultFilter())
 
     async function loadComments() {
-        console.log('filterBy to service:', filterBy)
         const comments = await commentService.query(filterBy)
         setComments(comments)
     }
@@ -29,7 +28,6 @@ export function CommentIndex() {
 
     function onChangeFilter(filterBy) {
         setFilterBy(filterBy)
-        console.log('filterBy:', filterBy)
     }
 
     if (!comments) return <div>Loading...</div>

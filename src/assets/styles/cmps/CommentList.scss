@@ -1,0 +1,18 @@
+.comments-container {
+    align-items: flex-start;
+    background-color: white;
+
+    .comment {
+        margin-block-start: 1em;
+        gap: .5em;
+
+        img{
+            width: 60px;
+        }
+
+        .comment-details {
+            align-items: flex-start;
+            gap: .7em;
+        }
+    }
+}

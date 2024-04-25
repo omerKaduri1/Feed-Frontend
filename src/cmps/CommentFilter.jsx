@@ -6,7 +6,7 @@ export function CommentFilter(props) {
 
     return (
         <form {...attrs}>
-            <input {...register('txt', 'text')} />
+            <input className="filter" {...register('txt', 'text')} placeholder="Filter" />
         </form>
     )
 
