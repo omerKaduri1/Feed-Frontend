@@ -1,6 +1,6 @@
 import { useFormRegister } from "../customHooks/useFormRegister"
 
-export function MailFilter(props) {
+export function CommentFilter(props) {
     const [register] = useFormRegister(props.filterBy, props.onChangeFilter)
     const attrs = { className: 'comment-filter' }
 

@@ -19,11 +19,9 @@ export function Form({ onAddComment }) {
     return (
         <form onSubmit={onSendComment} className="send-mail-form">
             <section>
-                {/* <label htmlFor="email">Email</label> */}
                 <input onChange={handleChange} value={to} type="email" name="to" id="to" placeholder="Email" />
             </section>
             <section>
-                {/* <label htmlFor="message">Message</label> */}
                 <textarea onChange={handleChange} value={message} type="txt" name="message" id="message" placeholder="Message" />
             </section>
             <Button variant="contained" type="submit">Submit</Button>

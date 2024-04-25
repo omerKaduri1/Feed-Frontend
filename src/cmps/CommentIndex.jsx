@@ -1,14 +1,13 @@
 import { Form } from "./Form"
-import { MailList } from "./MailList"
-import { MailFilter } from "./MailFilter"
+import { CommentList } from "./CommentList"
+import { CommentFilter } from "./CommentFilter"
 import { useEffect, useState } from "react"
 import { commentService } from "../services/comment.service"
 
-export function MailIndex() {
+export function CommentIndex() {
     const [comments, setComments] = useState([])
     const [filterBy, setFilterBy] = useState(commentService.getDefaultFilter())
 
-    console.log('comments:', comments)
     async function loadComments() {
         console.log('filterBy to service:', filterBy)
         const comments = await commentService.query(filterBy)
@@ -37,8 +36,8 @@ export function MailIndex() {
     return (
         <>
             <Form onAddComment={onAddComment} />
-            <MailFilter onChangeFilter={onChangeFilter} filterBy={filterBy} />
-            <MailList comments={comments} />
+            <CommentFilter onChangeFilter={onChangeFilter} filterBy={filterBy} />
+            <CommentList comments={comments} />
         </>
     )
 }

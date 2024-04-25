@@ -1,9 +1,9 @@
-import { MailIndex } from "./cmps/MailIndex";
+import { CommentIndex } from "./cmps/CommentIndex"
 
 export function App() {
   return (
     <section className="app-container">
-      <MailIndex />
+      <CommentIndex />
     </section>
   )
 }
