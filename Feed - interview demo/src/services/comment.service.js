@@ -1,3 +1,4 @@
+import { utilService } from "./util.service"
 import { httpService } from "./http.service"
 
 export const commentService = {
@@ -7,12 +8,18 @@ export const commentService = {
     save,
     getDefaultFilter,
     getEmptyComment,
+    getByUserId
 }
 
 const BASE_URL = 'comment'
 
 async function query(filterBy) {
     return httpService.get(BASE_URL, { params: { filterBy } })
+}
+
+async function getByUserId(userId) {
+    const comments = await httpService.get(BASE_URL + '/usercomments')
+    return comments
 }
 
 function getById(commentId) {
@@ -40,7 +47,7 @@ function getDefaultFilter() {
 
 function getEmptyComment() {
     return {
-        to: '',
+        email: '',
         message: ''
     }
 }
