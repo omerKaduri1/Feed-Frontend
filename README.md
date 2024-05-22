@@ -1,8 +1,19 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Feed project
 
-Currently, two official plugins are available:
+Feed is a mini end-to-end project, developed within 4 hours as part of a homework simulation in the Bootcamp course by Coding Academy.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Link to Feed on render: https://feed-backend-mqm1.onrender.com/
+
+## Tech Stack
+
+**Client:** React.js, Scss and SASS. 
+
+**Server:** Node.js, Express, mongoDB
+
+
+## Authors
+
+- [@amitf11](https://github.com/amitf11)
+- [@omerkaduri1](https://github.com/omerKaduri1)
+
